@@ -51,6 +51,7 @@ public class MainFrame extends JFrame {
         List<BaseFT> ftList = new ArrayList<>();
         if (cbOnePlacePlus.isSelected()) ftList.add(cbOnePlacePlus);
         if (cbOnePlaceMinus.isSelected()) ftList.add(cbOnePlaceMinus);
+        if (cbTwoDigitPlus.isSelected()) ftList.add(cbTwoDigitPlus);
         if (cbTwoDigitMinus.isSelected()) ftList.add(cbTwoDigitMinus);
         if (cbBaseDivision.isSelected()) ftList.add(cbBaseDivision);
         if (cbTenDigitMultiOnePlace.isSelected()) ftList.add(cbTenDigitMultiOnePlace);
@@ -62,8 +63,12 @@ public class MainFrame extends JFrame {
         for (int i = 0; i < AMOUNT; i++) {
             BaseFT ft = ftList.get(random.nextInt(ftList.size()));
             row += "(" + (i++ + 1) + ") " + ft.generate();
-            row += "                                       (" + (i++ + 1) + ") " + ft.generate();
-            row += "                                       (" + (i + 1) + ") " + ft.generate();
+            while(row.length() < 50)
+                row += " ";
+            row += "(" + (i++ + 1) + ") " + ft.generate();
+            while (row.length() < 100)
+                row += " ";
+            row += "(" + (i + 1) + ") " + ft.generate();
             System.out.println(row);
             row = "";
         }
