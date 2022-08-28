@@ -15,7 +15,7 @@ public class FTTwoDigitMinus extends BaseFT {
         int i2 = random.nextInt(i1); //
         if (i2 == 0) return generate();
         if (i2 >= i1){
-            System.out.println("exception");
+            System.out.println("exception in FTTwoDigitMinus");
             System.exit(0);
         }
         return i1 + " - " + i2 + " = ";
