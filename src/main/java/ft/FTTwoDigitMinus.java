@@ -14,10 +14,8 @@ public class FTTwoDigitMinus extends BaseFT {
         if (i1 < 10) return generate(); //如果随机数小于10, 就重新生成
         int i2 = random.nextInt(i1); //
         if (i2 == 0) return generate();
-        if (i2 >= i1){
-            System.out.println("exception in FTTwoDigitMinus");
-            System.exit(0);
-        }
+        if (i1 < 10 || i2 < 10) return generate();
+        if (i2 >= i1) return generate();
         return i1 + " - " + i2 + " = ";
     }
 }

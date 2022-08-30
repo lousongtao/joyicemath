@@ -15,7 +15,7 @@ public class MainFrame extends JFrame {
     private BaseFT cbTwoDigitPlus = new FTTwoDigitPlus("Two Digit Plus"); //两位数加法
     private BaseFT cbTwoDigitMinus = new FTTwoDigitMinus("Two Digit Minus"); //两位数减法
     private BaseFT cbBaseDivision = new FTBaseDivision("Base Division"); //乘法口诀表内除法
-    private BaseFT cbTenDigitMultiOnePlace = new FTTenDigitMultiOnePlace("Ten Digit Multi One Place"); //两位数乘个位数
+    private BaseFT cbTwoDigitMultiOnePlace = new FTTwoDigitMultiOnePlace("Two Digit Multi One Place"); //两位数乘个位数
     private BaseFT cbThreeDigitPlus = new FTThreeDigitPlus("Three Digit Plus"); //三位数加法
     private BaseFT cbThreeDigitMinus = new FTThreeDigitMinus("Three Digit Minus");//三位数减法
     //三位数除个位数
@@ -35,7 +35,7 @@ public class MainFrame extends JFrame {
         c.add(cbTwoDigitPlus);
         c.add(cbTwoDigitMinus);
         c.add(cbBaseDivision);
-        c.add(cbTenDigitMultiOnePlace);
+        c.add(cbTwoDigitMultiOnePlace);
         c.add(cbThreeDigitPlus);
         c.add(cbThreeDigitMinus);
         c.add(btnGen);
@@ -54,7 +54,7 @@ public class MainFrame extends JFrame {
         if (cbTwoDigitPlus.isSelected()) ftList.add(cbTwoDigitPlus);
         if (cbTwoDigitMinus.isSelected()) ftList.add(cbTwoDigitMinus);
         if (cbBaseDivision.isSelected()) ftList.add(cbBaseDivision);
-        if (cbTenDigitMultiOnePlace.isSelected()) ftList.add(cbTenDigitMultiOnePlace);
+        if (cbTwoDigitMultiOnePlace.isSelected()) ftList.add(cbTwoDigitMultiOnePlace);
         if (cbThreeDigitPlus.isSelected()) ftList.add(cbThreeDigitPlus);
         if (cbThreeDigitMinus.isSelected()) ftList.add(cbThreeDigitMinus);
         if (ftList.isEmpty()) return;
@@ -77,7 +77,7 @@ public class MainFrame extends JFrame {
     public static void main(String[] args) {
         MainFrame mf = new MainFrame();
         mf.setLocation(300, 300);
-        mf.setSize(300, 300);
+        mf.setSize(500, 300);
         mf.addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
